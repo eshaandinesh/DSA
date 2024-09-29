@@ -33,18 +33,18 @@ void insertMid(struct Node **head_ref, int new_data, int elem)
         struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
         new_node->data = new_data;
         struct Node *temp = *head_ref;
-        while (temp->data != elem && temp != NULL)
+        while (temp != NULL && temp->data != elem)
         {
             temp = temp->next;
         }
-        if (temp->data == elem)
+        if (temp == NULL)
         {
-            new_node->next = temp->next;
-            temp->next = new_node;
+            printf("\nNot in list\n");
         }
         else
         {
-            printf("\nNot in list\n");
+            new_node->next = temp->next;
+            temp->next = new_node;
         }
     }
 }
