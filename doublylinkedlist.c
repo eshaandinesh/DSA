@@ -177,7 +177,7 @@ void deleteElem(struct Node **head_ref, int elem)
     }
 }
 
-void deletePos(struct Node **head_ref, int pos) //
+void deletePos(struct Node **head_ref, int pos) 
 {
     if (*head_ref == NULL)
     {
@@ -211,7 +211,7 @@ void deletePos(struct Node **head_ref, int pos) //
         {
             struct Node *temp = curr->next;
             curr->next = curr->next->next;
-            if (curr->next != NULL) //
+            if (curr->next != NULL) 
             {
                 curr->next->prev = curr;
             }
